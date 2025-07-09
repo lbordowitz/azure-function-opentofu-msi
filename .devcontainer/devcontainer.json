@@ -1,0 +1,13 @@
+{
+    "name": "OpenTofu",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "hashicorp.terraform"
+            ]
+        }
+    },
+}
