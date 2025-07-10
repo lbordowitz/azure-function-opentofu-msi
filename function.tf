@@ -102,7 +102,7 @@ resource "azurerm_linux_function_app" "function_app" {
     "BACKEND_RESOURCE_GROUP_NAME"  = azurerm_resource_group.main.name
     "BACKEND_STORAGE_ACCOUNT_NAME" = azurerm_storage_account.fct_app_storage.name
     "BACKEND_CONTAINER_NAME"       = azurerm_storage_container.state_container.name
-    "BACKEND_KEY"                  = "tf-demo"
+    "BACKEND_KEY"                  = "tf-demo.tfstate"
   }
 
   depends_on = [
