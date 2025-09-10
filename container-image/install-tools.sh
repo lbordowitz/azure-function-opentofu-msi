@@ -16,6 +16,11 @@ apt-get update
 apt-get install -y azure-cli
 rm -rf /var/lib/apt/lists/*
 
+curl -sLo tofu.zip https://nightlies.opentofu.org/nightlies/20250909/tofu_nightly-20250909-22910f2b01_linux_amd64.zip
+unzip tofu.zip
+mkdir /tmp/ott
+mv tofu /tmp/ott
+
 curl -fsSL https://get.opentofu.org/opentofu.gpg > /etc/apt/trusted.gpg.d/opentofu.gpg
 curl -fsSL https://packages.opentofu.org/opentofu/tofu/gpgkey | gpg --no-tty --batch --dearmor -o /etc/apt/trusted.gpg.d/opentofu-repo.gpg
 chmod a+r /etc/apt/trusted.gpg.d/opentofu.gpg /etc/apt/trusted.gpg.d/opentofu-repo.gpg
